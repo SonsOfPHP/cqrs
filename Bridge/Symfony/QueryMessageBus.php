@@ -28,6 +28,8 @@ class QueryMessageBus
      */
     public function handle(object $query)
     {
+        @trigger_error(sprintf('Using "%s" is deprecated. Use "SonsOfPHP\Bridge\Symfony\Cqrs\QueryMessageBus" instead.', QueryMessageBus::class), \E_USER_DEPRECATED);
+
         return $this->handleQuery($query);
     }
 }

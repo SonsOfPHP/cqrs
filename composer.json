@@ -1,9 +1,13 @@
 {
     "name": "sonsofphp/cqrs",
     "type": "library",
-    "description": "CQRS Compents",
+    "description": "CQRS Component",
     "keywords": [
-        "cqrs"
+        "cqrs",
+        "symfony",
+        "command",
+        "query",
+        "event sourcing"
     ],
     "homepage": "https://github.com/SonsOfPHP/cqrs",
     "license": "MIT",
@@ -31,14 +35,15 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.4",
-        "symfony/options-resolver": "^5|^6"
+        "sonsofphp/cqrs-symfony": "^0.2@dev"
     },
     "require-dev": {
         "symfony/messenger": "^5"
     },
     "suggest": {
         "symfony/messenger": "Use message buses to handle commands asynchronously",
-        "sonsofphp/event-sourcing": "Use with event sourcing"
+        "sonsofphp/event-sourcing": "Use with event sourcing",
+        "sonsofphp/cqrs-symfony": "Adds more functionality to the CQRS Component"
     },
     "extra": {
         "sort-packages": true,

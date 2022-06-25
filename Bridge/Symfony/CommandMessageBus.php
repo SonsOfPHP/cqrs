@@ -42,6 +42,8 @@ class CommandMessageBus
      */
     public function dispatch(object $command): Envelope
     {
+        @trigger_error(sprintf('Using "%s" is deprecated. Use "SonsOfPHP\Bridge\Symfony\Cqrs\CommandMessageBus" instead.', CommandMessageBus::class), \E_USER_DEPRECATED);
+
         return $this->messageBus->dispatch($command, $this->stamps);
     }
 }
